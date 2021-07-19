@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 count=$1
 echo "$count"
 
@@ -25,5 +24,7 @@ for (( count = 0; count < 10; count++ )); do
   fi
 done
 
-args=("$0")
-echo $(args[0]) $(args[1]) $(args[2])
+args=("$@")
+echo ${args[0]}
+echo ${args[1]}
+echo $#
